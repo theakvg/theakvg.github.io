@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasjon</title>
+    <style>
+        @keyframes flyttMeg {
+            to {
+                margin-left: 400px;
+            }
+        }
+
+        #firkant {
+            width: 50px;
+            height: 50px;
+            background-color: #2a6496;
+
+            /*animation: flyttMeg 2500ms infinite alternate forwards;*/
+
+            animation-name: flyttMeg;
+            animation-duration: 1500ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-timing-function: steps(5) /*linear, ease-in/out*/ ;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="firkant"></div>
+
+</body>
+</html>
