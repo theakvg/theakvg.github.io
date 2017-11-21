@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 04</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            margin: 20px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        main > p {
+            background-color: #fac32b;
+            border-bottom: solid orange;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 25px;
+            font-weight: 450;
+            min-heigth: 30px;
+            border-radius: 2px;
+            padding: 10px;
+
+        }
+
+        .notext { background-color: #f9fa95
+        }
+
+        .row-1 { grid-row: span 1; }
+        .row-2 { grid-row: span 2; }
+
+        .col-1 { grid-column: span 1; }
+        .col-2 { grid-column: span 2; }
+        .col-3 { grid-column: span 3; }
+        .col-4 { grid-column: span 4; }
+        .col-5 { grid-column: span 5; }
+        .col-6 { grid-column: span 6; }
+        .col-7 { grid-column: span 7; }
+        .col-8 { grid-column: span 8; }
+        .col-9 { grid-column: span 9; }
+        .col-10 { grid-column: span 10; }
+        .col-11 { grid-column: span 11; }
+        .col-12 { grid-column: span 12; }
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+        <p>L</p>
+        <p>Æ</p>
+        <p>R</p>
+        <p class="row-2 notext"></p>
+        <p>D</p>
+        <p>E</p>
+        <p>G</p>
+        <p class="col-2 notext"></p>
+        <p>C</p>
+        <p>S</p>
+        <p>S</p>
+        <p>M</p>
+        <p>E</p>
+        <p>D</p>
+        <p class="col-4 notext"></p>
+        <p>G</p>
+        <p>R</p>
+        <p>I</p>
+        <p>D</p>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nr. 05</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Lora" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            min-height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+        body > header {
+            background-color: white;
+            filter: drop-shadow(0px 5px 5px black);
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        body > header > nav > a.valgt {
+            background-color: #5d5ea5;
+            color: white;
+        }
+        body > header > nav > a:hover {
+            background-color: #5d5ea5;
+            color: white;
+        }
+        body > footer {
+            padding: 10px;
+            display: grid;
+            grid-gap: 20px;
+            grid-auto-flow: column;
+            text-align: center;
+            background-color: #5d5ea5;
+        }
+        body > footer > article {
+            font-size: 14px;
+        }
+        body > footer > article > img {
+            width: 90px;
+        }
+        body > main {
+            background-image: url("../Websider/Eksempel1/ccb35c4047e3904bbeae59e2deb1089d.jpg");
+            background-size: cover;
+            background-position: center bottom;
+            min-width:100vh;
+        }
+        body > main > section {
+            color: #faf8dd;
+            text-align: center;
+            margin-top: 125px;
+        }
+        body > main > section > h1 {
+            font-size: 50px;
+            font-family: 'Lora', serif;
+        }
+        body > main > section > h2 {
+            font-size: 30px;
+            font-family: 'Lora', serif;
+        }
+        body > main > section > a {
+            text-decoration: none;
+            color: #333333;
+            background-color: white;
+            font-size: 25px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        body > main > section > a:hover {
+            background-color: #5d5ea5;
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#">HJEM</a>
+            <a href="#">CREW</a>
+            <a href="#">KONTAKT OSS</a>
+            <a class="valgt" href="#">OM OSS</a>
+            <a href="#">BILETTER</a>
+            <a href="#">INFO</a>
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Kikkerter og sånn</h1>
+            <h2>Interessante greier for alle og enhver</h2>
+            <a href="#">TILBUD</a>
+        </section>
+    </main>
+    <footer>
+        <article>
+            <img src="Kikkert.png">
+            <p>Dette er en fansy ass kikkert, og mer enn det trenger jeg ikke å si om den saken, jeg renger bare å skrive en haug med ord. Dette er da en haug med ord. </p>
+        </article>
+        <article>
+            <img src="papir.png">
+            <p>Dette er en fansy ass pen og papir, og mer enn det trenger jeg ikke å si om den saken, jeg renger bare å skrive en haug med ord. Dette er da en haug med ord.</p>
+        </article>
+        <article>
+            <img src="Lyspære.png">
+            <p>Dette er en fansy ass lyspære, og mer enn det trenger jeg ikke å si om den saken, jeg renger bare å skrive en haug med ord. Dette er da en haug med ord.</p>
+        </article>
+
+    </footer>
+
+</body>
+</html>

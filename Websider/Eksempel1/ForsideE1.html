@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forside</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            font-family: sans-serif;
+            grid-template-rows: auto 1fr auto;
+            min-height: 150vh;
+
+        }
+        body > header {
+            background-color: white;
+            filter: drop-shadow(0px 5px 5px black);
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: Broadway, sans-serif;
+        }
+        body > header > nav > a:hover {
+            background-color: orange;
+            color: white;
+        }
+        body > main {
+            background-image: url("coffestuff.jpg");
+            background-size: cover;
+            background-position: center;
+            min-width:100vh;
+        }
+        body > footer {
+            display: grid;
+            grid-gap: 20px;
+            grid-auto-flow: column;
+            text-align: center;
+        }
+        body > footer > article {
+            font-size: 14px;
+            background-color: #ffd664;
+            padding-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">LOGO hjem</a>
+            <a href="#">Arrangementer</a>
+            <a class="valgt" href="#">Meny</a>
+            <a href="#">Kontakt Oss</a>
+            <a href="#">Info</a>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <article>
+            <h2>LOGO</h2>
+            <p>Her kan du sette inn åpningstidene for bedriften,</p>
+            <p> evt. også kontaktinfo eller adresse</p>
+        </article>
+        <article>
+            <h3>Selve arrangementet</h3>
+            <p>Her kan kommende arrangement eller arrangementer stå, </p>
+            <P>sammen med tidspunkter og evt. litt info</p>
+        </article>
+    </footer>
+</body>
+</html>
