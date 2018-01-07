@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infected, Konkurranser</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <style>
+        body {
+            display: grid;
+            background-color: black;
+            grid-template-rows: auto 1fr auto;
+            margin: 0;
+        }
+        #burgermeny {
+            position: absolute;
+        }
+        #burger {
+            cursor: pointer;
+            display: grid;
+            width: 16px;
+            height: 16px;
+            align-content: space-between; /*legger luft mellom delene av burgeren*/
+            padding: 20px;
+        }
+        #burger > div {
+            height: 2px;
+            background-color: white;
+            transition: 0.6s;
+        }
+        #cb {
+            display: none;
+        }
+        #cb:checked ~ #menu{
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        a {
+            text-decoration: none;
+        }
+        #toppmeny {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 80px;
+        }
+        #toppmeny > a {
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        #Billetter {
+            padding: 20px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        #Billetter:hover {
+            background-color: green;
+        }
+        #toppmeny > a > img {
+            max-height: 45px;
+        }
+        #menu {
+            background-color: #262626;
+            position: absolute;
+            width: 230px;
+            min-height: calc(100vh - 64px);
+            left: -250px;
+            top: 55px;
+            transition: 0.6s;
+        }
+        #menu > ul {
+            text-decoration: none;
+            text-align: center;
+        }
+        #menu > ul > li {
+            list-style: none;
+            padding-top: 15px;
+            padding-bottom: 34px;
+            margin-left: 0;
+        }
+        #menu > ul > li > a {
+            color: #939393;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        #menu > ul > li > a:hover {
+            color: green;
+        }
+        #menu > ul > li > a > img {
+            max-width: 20px;
+            max-height: 20px;
+            padding: 5px;
+        }
+        body > main > section {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+        body > main > section > h3 {
+            color: #9c9c9c;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav id="burgermeny">
+            <input type="checkbox" id="cb">
+            <label for="cb" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="menu">
+                <ul>
+                    <li></li>
+                    <li>
+                        <a href="Informasjon.html"> <img src="BilderIkoner/ikon%20-%20info%202-01.png" />INFORMASJON</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Crew.html"><img src="BilderIkoner/ikon%20-%20crew%202.png" />CREW</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Konkurranser.html"><img src="BilderIkoner/ikon%20-%20konsoll%202.png" />KONKURRANSER</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Agenda.html"><img src="BilderIkoner/ikon%20-%20kalender%202.png" />AGENDA</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="KontaktOss.html" id="telefon" > <img src="BilderIkoner/ikon%20-%20telefon%202.png"/>KONTAKT OSS</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav id="toppmeny">
+            <a href="NewForside.html"> <img src="BilderIkoner/infected_logo_hvit_medium.png"/></a>
+            <a href="https://tickets.infected.no/v2/" id="Billetter">BILLETTER</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Konkurranser</h1>
+            <h3>Konkurransene er forløpig ikke tilgjengelig</h3>
+        </section>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+#burgermeny {
+    position: absolute;
+}
+#burger {
+    cursor: pointer;
+    display: grid;
+    width: 16px;
+    height: 16px;
+    align-content: space-between; /*legger luft mellom delene av burgeren*/
+    padding: 20px;
+}
+#burger > div {
+    height: 2px;
+    background-color: white;
+    transition: 0.6s;
+}
+a {
+    text-decoration: none;
+}
+#toppmeny {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+}
+#toppmeny > a {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#Billetter {
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+#Billetter:hover {
+    background-color: green;
+}
+#toppmeny > a > img {
+    max-height: 45px;
+}
+#menu {
+    background-color: #262626;
+    position: absolute;
+    width: 230px;
+    min-height: calc(100vh - 64px);
+    left: -250px;
+    top: 55px;
+    transition: 0.6s;
+}
+#menu > ul {
+    text-decoration: none;
+    text-align: center;
+}
+#menu > ul > li {
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+}
+#menu > ul > li > a {
+    color: #939393;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+}
+#menu > ul > li > a:hover {
+    color: green;
+}
+#menu > ul > li > a > img {
+    max-width: 20px;
+    max-height: 20px;
+    padding: 10px;
+}

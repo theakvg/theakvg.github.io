@@ -3,8 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Infected</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Roboto+Condensed:700" rel="stylesheet">
     <style>
+
+        body {
+            margin: 0;
+            display: grid;
+            background-color: #333333;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        body > header {
+            background-color: #1d1d1d;
+            filter: drop-shadow(0px 5px 5px);
+            max-height: 120px;
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;           
+            text-align: right;
+            padding-right: 10px;
+            padding-left: 0;
+            min-height: 30%;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+            text-align: right;
+        }
+
+        body > header > nav > a > img {
+            max-height: 15px;
+            align-items: center;
+        }
+        body > header > nav > a > .hvitB:hover {
+            border-bottom: solid #007d00 5px;
+        }
+        body > header > nav > img {
+            max-width: 200px;
+            padding: 7px;
+            padding-left: 5%;
+        }
+        body > main {
+            background-image: url("BilderIkoner/22218576_10210134567107298_3798461927165629738_o.jpg");
+            background-size: cover;
+            min-width: 100vh;
+            background-position: center;
+        }
+        body > main > section {
+            color: white;
+            text-align: center;
+            margin: 180px;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        body > main > section > h2 {
+            font-size: 50px;
+            opacity: 1.0;
+        }
+        body > main > section > h1 {
+            font-size: 90px;
+            opacity: 1.0;
+        }
+        .hvitB {
+            background-color: white;
+            color: black;
+            margin-top: 1px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 20px;
+            transform: translateY(1px); /* gjør at den hvite boksen ligger mellom header og main*/
+            text-align: center;
+            max-width: ;
+
+        }
+        #venstre {
+            margin-left: 20%;
+        }
+        #høyre {
+            margin-right: 20%;
+        }
+        #kontakt {
+            margin-right: 10%;
+        }
 
     </style>
 
@@ -13,11 +97,33 @@
 
      <header>
         <nav>
+            <img src="BilderIkoner/infected_logo_hvit_medium.png" alt=""/>
+            <a id="kontakt" href="#"><img src="BilderIkoner/ikon - telefon.png"/>    Kontakt</a>
+            <!-- <a href="#"><img src="BilderIkoner/ikon - info.png"/>    Informasjon</a>
+            <a href="#"><img src="BilderIkoner/ikon - billett.png"/>    Billetter</a>
+            <a href="#"><img src="BilderIkoner/ikon - crew.png"/>    Crew</a>
+            <a href="#"><img src="BilderIkoner/ikon - kalender.png"/>    Agenda</a>
+            <a href="#"><img src="BilderIkoner/ikon - konsoll-01.png"/>    Konkurranser</a> -->
 
         </nav>
-    </header>
-    <main>
+         <nav>
+             <a class="hvitB" href="#"> <img src="BilderIkoner/infected_logo_hvit_medium.png"/></a>
+             <a class="hvitB" id="venstre" href="#"> <img src="BilderIkoner/ikon - info.png"/> Informasjon</a>
+             <a class="hvitB" href="#"> <img src="BilderIkoner/ikon - billett.png"/>  Billetter</a>
+             <a class="hvitB" href="#"> <img src="BilderIkoner/ikon - crew.png"/>  Crew</a>
+             <a class="hvitB" href="#"> <img src="BilderIkoner/ikon - konsoll-01.png"/> Konkurranser</a>
+             <a class="hvitB" id="høyre" href="#"> <img src="BilderIkoner/ikon - kalender.png"/>Agenda</a>
 
+         </nav>
+    </header>
+
+    <main>
+        <section id="tekst">
+
+                <h2>Neste arrangement:</h2>
+                <h1>16. - 18. Februar</h1>
+
+        </section>
     </main>
     <footer>
 

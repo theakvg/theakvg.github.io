@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infected, Crew</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <style>
+        body {
+            display: grid;
+            background-color: black;
+            grid-template-rows: auto 1fr auto;
+            margin: 0;
+        }
+        #burgermeny {
+            position: absolute;
+        }
+        #burger {
+            cursor: pointer;
+            display: grid;
+            width: 16px;
+            height: 16px;
+            align-content: space-between; /*legger luft mellom delene av burgeren*/
+            padding: 20px;
+        }
+        #burger > div {
+            height: 2px;
+            background-color: white;
+            transition: 0.6s;
+        }
+        #cb {
+            display: none;
+        }
+        #cb:checked ~ #menu{
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        a {
+            text-decoration: none;
+        }
+        #toppmeny {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 80px;
+        }
+        #toppmeny > a {
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        #Billetter {
+            padding: 20px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        #Billetter:hover {
+            background-color: green;
+        }
+        #toppmeny > a > img {
+            max-height: 45px;
+        }
+        #menu {
+            background-color: #262626;
+            position: absolute;
+            width: 230px;
+            min-height: calc(100vh - 64px);
+            left: -250px;
+            top: 55px;
+            transition: 0.6s;
+        }
+        #menu > ul {
+            text-decoration: none;
+            text-align: center;
+        }
+        #menu > ul > li {
+            list-style: none;
+            padding-top: 15px;
+            padding-bottom: 34px;
+            margin-left: 0;
+        }
+        #menu > ul > li > a {
+            color: #939393;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        #menu > ul > li > a:hover {
+            color: green;
+        }
+        #menu > ul > li > a > img {
+            max-width: 20px;
+            max-height: 20px;
+            padding: 5px;
+        }
+        body > main > section {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+        #crew {
+            display: grid;
+            color: #9c9c9c;
+            text-align: left;
+            grid-template-columns: 1fr 1fr;
+        }
+        body > main {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+        body > main > div > section {
+            margin: 3%;
+            margin-top: 0;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+        body > main > div > section > h3 {
+            border-bottom: solid 2px;
+            color: white;
+        }
+        body > main > div > section > p {
+            font-size: smaller;
+        }
+        body > main > div > section > p > a {
+            color: green;
+        }
+        body > main > img {
+            max-width: 1300px;
+            grid-template-columns: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav id="burgermeny">
+            <input type="checkbox" id="cb">
+            <label for="cb" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="menu">
+                <ul>
+                    <li></li>
+                    <li>
+                        <a href="Informasjon.html"> <img src="BilderIkoner/ikon%20-%20info%202-01.png" />INFORMASJON</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Crew.html"><img src="BilderIkoner/ikon%20-%20crew%202.png" />CREW</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Konkurranser.html"><img src="BilderIkoner/ikon%20-%20konsoll%202.png" />KONKURRANSER</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Agenda.html"><img src="BilderIkoner/ikon%20-%20kalender%202.png" />AGENDA</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="KontaktOss.html" id="telefon" > <img src="BilderIkoner/ikon%20-%20telefon%202.png"/>KONTAKT OSS</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav id="toppmeny">
+            <a href="NewForside.html"> <img src="BilderIkoner/infected_logo_hvit_medium.png"/></a>
+            <a href="https://tickets.infected.no/v2/" id="Billetter">BILLETTER</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Informasjon om crewet</h1>
+        </section>
+        <div id="crew">
+            <section class="om">
+                <h3>Generelt</h3>
+                <p>Her vil du finne informasjon om de ulike crewene som finnes på infected. For Infected et er non-profit arrangement som er bygget på frivillighet og engasjemang blant ungdom i Asker omeng, og sammen lager vi infected to ganger i året for over 400 deltagere. Hvis du synes at å arbeide for et felles mål, sosialt samvær og en helg fult av morsomheter høres ut som noe for deg, meld deg så på linken <a href="https://crew.infected.no/v2/">HER</a></p>
+            </section>
+            <section class="crew">
+                <h3>Cafecrew</h3>
+                <p>Er det crewet som står for alle måltidene til crewet i sin helhet, i tillegg til salg av mat og drikke til deltagere døgnet rundt. Arbeidsoppgavene inneholder blant annet tilbedring og servering av mat til crew, salg og tilbedring av solgt mat til deltagere. Vi jobber på skift, som vil si at du jobber i noen timer, og deretter bytter med noen andre. </p>
+            </section>
+            <section class="security">
+                <h3>Security</h3>
+                <p>Security er crewet som passer på deltagerne under lanet. Hovedsaklig sitter de ved alle utgangsdører og andre viktige punkter, for å passe på at ingen uvelkomne kommer inn i bygget. Vi jobber på skift, og er delt inn i grupper. </p>
+            </section>
+            <section class="tech">
+                <h3>Techcrew</h3>
+                <p>Tech crewet passer på og opprettholder det viktigste av alt: internettet. De har kontroll på alt som har med interentt, nettsiden vår og mye mer. De jobber på skift, ved enten i techdesken (vår deltagerne kan få hjelp) eller på techrommet. </p>
+            </section>
+            <section class="Game">
+                <h3>Gamecrew</h3>
+                <p>Gamecrewet vårt har hovedansvaret og kontroll på konkurransene vi holder i løpet av infected. De driver konkurransene og passer på at ingen jukser, i tillegg holder de og har ansvaret for finalene i alle konkurransene. Disse holder vi gjerne i Radarsalen. Gamecrewet jobber på skift, men alle nødvendige er på jobb under konkurransene.</p>
+            </section>
+            <section class="core">
+                <h3>Core</h3>
+                <p>Core er crewet på toppen, de som holder alt sammen og hvem lederne av hvert crew svarer til. De har ansvaret for at alt går som det skal, og tar taket i eventuelle saker som skulle komme opp. Medlemmene av core er økonomisjef, leder og nestleder for Infected. </p>
+            </section>
+        </div>
+        <img src="BilderIkoner/gruppebildeet.jpg"/>
+    </main>
+
+</body>
+</html>

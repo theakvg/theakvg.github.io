@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forside</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+
+    <style>
+
+        body {
+            display: grid;
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        #tekst {
+            color: white;
+            text-align: center;
+            margin: 28.6%;
+            margin-top: 15%;
+             top: 0;
+            padding: 10px;
+            font-family: sans-serif;
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+        }
+        #tekst > h2 {
+            font-size: 35px;
+            opacity: 1.0;
+        }
+        #tekst > h1 {
+            font-size: 65px;
+            opacity: 1.0;
+        }
+        #burgermeny {
+            position: absolute;
+        }
+        #burger {
+            cursor: pointer;
+            display: grid;
+            width: 16px;
+            height: 16px;
+            align-content: space-between;
+            padding: 20px;
+        }
+        #burger > div {
+            height: 2px;
+            background-color: white;
+            transition: 0.6s;
+        }
+        #cb {
+            display: none;
+        }
+        #cb:checked ~ #menu{
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        a {
+            text-decoration: none;
+        }
+        #toppmeny {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 80px;
+            box-sizing: border-box;
+            min-height: 65px;
+        }
+        #toppmeny > a {
+            color: white;
+            display: block;
+            align-items: center;
+        }
+        #Billetter {
+            padding: 20px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            min-height: 25px;
+
+        }
+        #Billetter:hover {
+            background-color: green;
+        }
+        #toppmeny > a > img {
+            max-height: 45px;
+        }
+        #menu {
+            background-color: #262626;
+            position: absolute;
+            width: 230px;
+            min-height: 100vh;
+            left: -250px;
+            top: 65px;
+            transition: 0.6s;
+        }
+        #menu > ul {
+            text-decoration: none;
+            text-align: center;
+        }
+        #menu > ul > li {
+            list-style: none;
+            padding-top: 15px;
+            padding-bottom: 34px;
+            margin-left: 0;
+        }
+        #menu > ul > li > a {
+            color: #939393;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        #menu > ul > li > a:hover {
+            color: green;
+        }
+        #menu > ul > li > a > img {
+            max-width: 20px;
+            max-height: 20px;
+            padding: 5px;
+        }
+        main {
+
+            background-color: black;
+            max-height: calc(100vh - 64px);
+            overflow: hidden;
+        }
+        .slides {
+            width: 300%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            transition: 0.6s;
+            margin-left: 0;
+            user-select: none;
+
+        }
+        .slides > div {
+            text-align: center;
+        }
+        .slides > div > img {
+            width: 100%;
+            min-width: 500px;
+            left: 0;
+        }
+
+        @media (max-width: 950px) {
+            #tekst {
+                margin: 0;
+                margin-top: 25%;
+                padding: 10px;
+                font-family: sans-serif;
+                position: absolute;
+                margin-left: 43%;
+            }
+            #tekst > h2 {
+                font-size: 25px;
+                opacity: 1.0;
+            }
+            #tekst > h1 {
+                font-size: 45px;
+                opacity: 1.0;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <nav id="burgermeny">
+            <input type="checkbox" id="cb">
+            <label for="cb" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="menu">
+                <ul>
+                    <li></li>
+                    <li>
+                        <a href="Informasjon.html"> <img src="BilderIkoner/ikon%20-%20info%202-01.png" />INFORMASJON</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Crew.html"><img src="BilderIkoner/ikon%20-%20crew%202.png" />CREW</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Konkurranser.html"><img src="BilderIkoner/ikon%20-%20konsoll%202.png" />KONKURRANSER</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Agenda.html"><img src="BilderIkoner/ikon%20-%20kalender%202.png" />AGENDA</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="KontaktOss.html" id="telefon" > <img src="BilderIkoner/ikon%20-%20telefon%202.png"/>KONTAKT OSS</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav id="toppmeny">
+            <a href="NewForside.html"> <img src="BilderIkoner/infected_logo_hvit_medium.png"/></a>
+            <a href="https://tickets.infected.no/v2/" id="Billetter">BILLETTER</a>
+        </nav>
+
+    </header>
+
+    <main>
+       <div class="slides">
+            <div>
+                <img src="BilderIkoner/22135731_10210134555347004_6352907644459715955_o.jpg" />
+            </div>
+            <div>
+                <img src="BilderIkoner/22137212_10210134551786915_7240827956355135363_o.jpg"/>
+            </div>
+            <div>
+                <img src="BilderIkoner/22218576_10210134567107298_3798461927165629738_o.jpg"/>
+            </div>
+        </div>
+        <section id="tekst">
+            <h2>Neste arrangement:</h2>
+            <h1>16. - 18. Februar</h1>
+        </section>
+    </main>
+
+    <script>
+
+        let slides = document.querySelector(".slides");
+        let marg = 0;
+
+
+
+        function forover() {
+            if(marg > -200) {
+                marg = marg - 100;
+            } else {
+                marg = 0;
+            }
+            slides.style.marginLeft = marg + "%";
+        }
+
+        function bakover() {
+            if(marg < 0) {
+                marg = marg + 100;
+            }
+            slides.style.marginLeft = marg + "%";
+        }
+
+        setInterval(forover, 10000);
+
+    </script>
+
+</body>
+</html>

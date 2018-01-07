@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infected, Informasjon</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <style>
+        body {
+            display: grid;
+            background-color: black;
+            grid-template-rows: auto 1fr auto;
+            margin: 0;
+        }
+        #burgermeny {
+            position: absolute;
+        }
+        #burger {
+            cursor: pointer;
+            display: grid;
+            width: 16px;
+            height: 16px;
+            align-content: space-between; /*legger luft mellom delene av burgeren*/
+            padding: 20px;
+        }
+        #burger > div {
+            height: 2px;
+            background-color: white;
+            transition: 0.6s;
+        }
+        #cb {
+            display: none;
+        }
+        #cb:checked ~ #menu{
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        a {
+            text-decoration: none;
+        }
+        #toppmeny {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 80px;
+        }
+        #toppmeny > a {
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        #Billetter {
+            padding: 20px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        #Billetter:hover {
+            background-color: green;
+        }
+        #toppmeny > a > img {
+            max-height: 45px;
+        }
+        #menu {
+            background-color: #262626;
+            position: absolute;
+            width: 230px;
+            min-height: calc(100vh - 64px);
+            left: -250px;
+            top: 55px;
+            transition: 0.6s;
+        }
+        #menu > ul {
+            text-decoration: none;
+            text-align: center;
+        }
+        #menu > ul > li {
+            list-style: none;
+            padding-top: 15px;
+            padding-bottom: 34px;
+            margin-left: 0;
+        }
+        #menu > ul > li > a {
+            color: #939393;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        #menu > ul > li > a:hover {
+            color: green;
+        }
+        #menu > ul > li > a > img {
+            max-width: 20px;
+            max-height: 20px;
+            padding: 5px;
+            background-position: center;
+        }
+        #INFO {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: #9c9c9c;
+            text-align: left;
+        }
+        body > main {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+        body > main > div > section {
+            margin: 3%;
+            margin-top: 0;
+        }
+        body > main > div > section > h3 {
+
+            border-bottom: solid 2px;
+            color: white;
+        }
+        body > main > div > section > p {
+            font-size: smaller;
+        }
+        .HVA {
+            margin: 3%;
+        }
+        .VIKTIG {
+            margin: 3%;
+        }
+        body > main > div > section > p > a {
+            color: green;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav id="burgermeny">
+            <input type="checkbox" id="cb">
+            <label for="cb" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <nav id="menu">
+                <ul>
+                    <li></li>
+                    <li>
+                        <a href="Informasjon.html"> <img src="BilderIkoner/ikon%20-%20info%202-01.png" />INFORMASJON</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Crew.html"><img src="BilderIkoner/ikon%20-%20crew%202.png" />CREW</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Konkurranser.html"><img src="BilderIkoner/ikon%20-%20konsoll%202.png" />KONKURRANSER</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="Agenda.html"><img src="BilderIkoner/ikon%20-%20kalender%202.png" />AGENDA</a>
+                    </li>
+                    <li></li>
+                    <li>
+                        <a href="KontaktOss.html" id="telefon" > <img src="BilderIkoner/ikon%20-%20telefon%202.png"/>KONTAKT OSS</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </nav>
+        </nav>
+        <nav id="toppmeny">
+            <a href="NewForside.html"> <img src="BilderIkoner/infected_logo_hvit_medium.png"/></a>
+            <a href="https://tickets.infected.no/v2/" id="Billetter">BILLETTER</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Informasjon om Infected</h2>
+        </section>
+        <div id="INFO">
+            <section class="HVA">
+                <h3>Hva og for hvem er Infected</h3>
+                <p>Infected er et av Akershus største datatreff (LAN-party), og holder til i kulturhuset i Asker kommune. Arrangementet varer tre dager og huser over 450 personer. Gjennom hele arrangementet blir det arrangert konkurranser (compo) med premier. Infected startet opp i 2005-2006 i Leikvollhallen i Asker, men i de senere årene har deltakerantallet steget kraftig og kulturhuset ble en passende arena for arrangementet.</p>
+                <p>Vi ønsker all data- og gaming-interessert ungdom velkommen til Infected uavhengig hvor du kommer fra. I tillegg er det ingen fastsatt aldersgrense på Infected, men alle under 14 år må ha med skriftlig bekreftelse fra foreldre, ettersom dette er et 48 timers arrangement.</p>
+            </section>
+            <section class="VIKTIG">
+                <h3>Viktig informasjon</h3>
+                <p>Husk å ta med legitimasjon, uten det kommer du ikke inn. Du står selv ansvarlig for din oppførsel under LAN-et, og kan få advarsler om utestengelse fra arrangementet før en eventuell utvisning ved brudd på Infected sine regler og rettningslinjer. Vi oppfordrer alle deltakere til å ha jevnlig kontakt med hjemmet underveis, og ta med seg mobiltelefon e.l. Det vil alltid være personer over 18 år tilstede i Infected sitt crew som hjelper deg ved behov.</p>
+            </section>
+            <section class="pakk">
+                <h3>Pakking</h3>
+                <p>Når du skal på et LAN så er viktig å ha med seg en par ting for at fornøyelsen skal bli maksimal. For å hjelpe dere, har vi laget en pakkeliste som vi anbefaler at dere følger, slik at dere slipper å mangle noe halveis ute i arrangementet. Vi vil i tillegg minne om at plassene er 70cm * 70 cm, og alt av utstyr til datamaskinen ikke ta mer plass enn dette, da dette vil skape problemer for alle parter.Pakkelisten finner du <a href="Pakkeliste.html">HER</a></p>
+            </section>
+
+        </div>
+
+
+    </main>
+
+
+
+
+
+</body>
+</html>
+
