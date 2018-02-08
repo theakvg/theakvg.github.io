@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+
+    <main id="main"></main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD-QdHx3qpmATvKG9hQUeg_XBmCa8-9BV0",
+            authDomain: "it01-99e3c.firebaseapp.com",
+            databaseURL: "https://it01-99e3c.firebaseio.com",
+            projectId: "it01-99e3c",
+            storageBucket: "it01-99e3c.appspot.com",
+            messagingSenderId: "780119102320"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const main = document.getElementById("main");
+
+        const db = firebase.database();
+
+        const biler = db.ref("bilregister/biler");
+        const personer = db.ref("bilregister/personer");
+|
+        //CREATE
+        const petter = personer.child("17028091919");
+        petter.set({
+            fornavn: "Petter",
+            etternavn: "Solberg"
+        });
+
+        //Ny person
+        const martin = personer.child("03057683748");
+        martin.set({
+            fornavn: "Martin",
+            etternavn: "Schanke"
+        });
+
+        //UPDATE
+        martin.update({
+            etternavn: "Schanche"
+        });
+
+        //DELETE/REMOVE
+        petter.remove();
+
+        //READ
+        function visPerson(snap) {
+            const person = snap.val();
+            main.innerHTML += `<p>Ny person: ${person.fornavn}</p>`;
+        }
+
+        personer.on("child_added", visPerson);
+
+
+
+    </script>
+
+</body>
+</html>
