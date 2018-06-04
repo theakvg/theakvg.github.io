@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restauranter</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            background-color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            min-height: 100px;
+            margin-top: 0;
+        }
+        header > h1 {
+            font-family: "Niagara Solid", sans-serif;
+            text-align: center;
+            font-size: 80px;
+            color: darkorange;
+            margin-top: 20px;
+        }
+        .box {
+            background-color: white;
+            text-align: left;
+            padding: 10px;
+            margin-left: 30px;
+            margin-top: auto;
+            margin-bottom: auto;
+            max-width: 400px;
+            font-size: 25px;
+        }
+        .box > h2 {
+            border-bottom: black solid 3px;
+        }
+        .restback {
+            width: 1fr;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Restauranter</h1>
+</header>
+<main>
+    <section id="restback">
+
+    </section>
+    <section id="oversikt">
+
+
+
+    </section>
+
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD-QdHx3qpmATvKG9hQUeg_XBmCa8-9BV0",
+        authDomain: "it01-99e3c.firebaseapp.com",
+        databaseURL: "https://it01-99e3c.firebaseio.com",
+        projectId: "it01-99e3c",
+        storageBucket: "it01-99e3c.appspot.com",
+        messagingSenderId: "780119102320"
+    };
+    firebase.initializeApp(config);
+</script>
+<script>
+    const db = firebase.database();
+    const restauranter = db.ref("oppgaveDBR/restauranter");
+
+    const oversikt = document.getElementById("oversikt");
+
+
+
+    function visRestaurant(snap){
+        let restaurant = snap.val();
+
+        oversikt.innerHTML += `
+                <nav class="box">
+                    <h2 id="navn">${restaurant.navn}</h2>
+                    <p id="mat"> <b>Mat:</b> ${restaurant.mat}</p>
+                    <p id="beskrivelse">${restaurant.beskrivelse}</p>
+                    <p id="stjerner"><b>Stjerner:</b>${restaurant.stjerner}</p>
+                    <p id="bordbestilling">Bestill på ${restaurant.bordbestilling}</p>
+                </nav>
+            `;
+
+
+        document.body.style.backgroundImage = "url(Bilder/" + restaurant.bilde + ")";
+
+    }
+
+    restauranter
+        .orderByChild("navn")
+        .on("child_added", visRestaurant);
+
+
+
+</script>
+
+</body>
+</html>

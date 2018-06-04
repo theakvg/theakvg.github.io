@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <title>Mobile the restaurant</title>
+
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: darkorange;
+                color: white;
+                height: 100px;
+                margin: 0;
+            }
+            nav {
+                display: grid;
+            }
+            nav > a {
+                text-decoration: none;
+                color: white;
+                margin: auto 20px;
+                text-align: right;
+                font-size: 36px;
+                font-family: "Niagara Solid", sans-serif;
+                grid-column: 2;
+            }
+
+            #title {
+                text-align: center;
+                max-height: 60px;
+                margin: 20px 10px;
+                grid-column: 1;
+            }
+            #background {
+                max-width: 100%;
+            }
+            footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding: 20px;
+                text-align: center;
+            }
+            footer > div {
+                padding: 20px;
+            }
+            footer > div > * {
+                padding: 10px;
+            }
+            footer img {
+                max-width: 100%;
+            }
+            main {
+                padding: 20px;
+            }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <header>
+        <nav id="toppmeny">
+            <img id="title" src="Bilder/oRDERLINE, IT prosjekt.png HVIT.png"/>
+            <a class="tekst" href="drop.html">Restauranter</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <nav>
+            <img id="background" src="Bilder/background.jpg"/>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="anbefaling">
+             <h2>Egon, Sandvika</h2>
+             <p>En restaurant som server variert mat og med en atmosfære som ligner hjemmekoselig</p>
+             <a href=""><img src="Bilder/egon sandvika.jpg"/></a>
+        </div>
+        <div class="anbefaling">
+            <h2>Peppes pizza</h2>
+            <p>En kjederestaurant med mange valg av pizzaer, som har fått god kritikk de siste årene...</p>
+            <a href=""><img src="Bilder/Peppes pizza oslo.jpg"/></a>
+        </div>
+        <div class="anbefaling">
+            <h2>Olivias</h2>
+            <p>En kjederestaurant med fabeliaktig god italiensk pizza, med en fancy atmosfære</p>
+            <a href=""><img src="Bilder/olivias oslo.jpg"/></a>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+</html>

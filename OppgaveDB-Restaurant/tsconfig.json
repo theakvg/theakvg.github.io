@@ -1,0 +1,99 @@
+{
+  "oppgaveDBR": {
+    "restauranter": {
+      "0001": {
+        "id" : "0001",
+        "navn": "Peppes Pizza",
+        "sted": "Oslo",
+        "mat": "Pizza",
+        "alkohol": true,
+        "beskrivelse": "En kjederestaurant med mange valg av pizzaer, som har fått god kritikk de siste årene...",
+        "bordbestilling": 91549843,
+        "stjerner": 3.8,
+        "bilde": "Peppes pizza oslo.jpg"
+      },
+      "0002": {
+        "id" : "0002",
+        "sted": "Asker",
+        "navn": "Egon",
+        "mat": "Variert",
+        "alkohol": true,
+        "beskrivelse": "En kjederestaurant med kvalitetsmat som er god og variert, med en atmosfære som er hjemmekoselig",
+        "bordbestilling": 91549843,
+        "bilde": "Egon-Asker-(1).jpg",
+        "stjerner": 4.2
+      },
+      "0003": {
+        "id" : "0003",
+        "navn": "Munchies",
+        "sted": "Oslo",
+        "mat": "Hamburger",
+        "alkohol": true,
+        "beskrivelse": "En liten kjederestaurant med svært gode burgere, men ukas eller månedens burger",
+        "bordbestilling": 91549843,
+        "bilde": "Paros-Santorini-Frognerbadet-Munchies-259.jpg",
+        "stjerner": 4.7
+      },
+      "0004": {
+        "id" : "0004",
+        "navn": "Bambus sushi",
+        "sted": "Sandvika",
+        "mat": "Sushi",
+        "alkohol": false,
+        "beskrivelse": "En kjederestaurant som går hovedsaklig ut på sushi, men med andre innslag av asiatisk mat, eks. vårruller, wok osv.",
+        "bordbestilling": 91549843,
+        "stjerner": 4.1,
+        "bilde": "bambuss-sandvika-861.jpg"
+      },
+      "0005": {
+        "id" : "0005",
+        "navn": "Olivias",
+        "sted": "Oslo",
+        "mat": "Pizza",
+        "alkohol": true,
+        "beskrivelse": "En kjederestaurant med fabeliaktig god italiensk pizza, med en fancy atmosfære",
+        "bordbestilling": 91549843,
+        "bilde": "olivias oslo.jpg",
+        "stjerner": 4.8
+      },
+      "0006": {
+        "id" : "0006",
+        "navn": "Restaurant Caspar",
+        "sted": "Sandvika",
+        "mat": "Variert",
+        "alkohol": true,
+        "beskrivelse": "En restaurant med god og variert mat som passer til enhver anledning",
+        "bordbestilling": 91549843,
+        "bilde": "caspar sandvika.jpg",
+        "stjerner": 3.6
+      },
+      "0007": {
+        "id" : "0007",
+        "navn": "Egon",
+        "sted": "Sandvika",
+        "mat": "Variert",
+        "alkohol": true,
+        "beskrivelse": "En restaurant som server variert mat og med en atmosfære som ligner hjemmekoselig",
+        "bordbestilling": 91549843,
+        "bilde": "egon sandvika.jpg",
+        "stjerner": 3.2
+      }
+
+    },
+    "steder": {
+      "Asker": [
+        "0002"
+      ],
+      "Sandvika": [
+        "0007",
+        "0006",
+        "0004"
+      ],
+      "Oslo": [
+        "0005",
+        "0003",
+        "0001"
+      ]
+    }
+  }
+}
